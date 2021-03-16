@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{ 
+    background-image: linear-gradient(90deg, rgb(54, 54, 197), rgb(214, 108, 108));
+    color: white;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+.search-area{
+    border-radius: 3em;
+    background-color: lightgrey;
+    position: relative;
+    width: 100px;
+    overflow: hidden;
+    transition: width .5s ease-out;
+}
+
+.input{
+    border: none;
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+    padding-left: 30px;
+    font-size: 1rem;
+}
+
+.button{
+    background-color: lightgrey;
+    border: none;
+    box-shadow: none;
+    height: 100px;
+    width: 100px;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-out;
+}
+
+
+
+
+.button:focus, input:focus{
+    outline: none;
+}
+
+.search-area.active{
+    width: 400px;
+}
+
+.search-area.active .input{
+    width: 500px;
+}
+.search-area.active .button{
+    transform: translateX(500px);
+    background-color: transparent;
+}
+
+.home-btn{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    height: 2em;
+    width: 8em;
+}
+.home-btn a {
+    color: black;
+    padding: 1em 2em;
+    font-family: inherit;
+    text-decoration: none;
+}

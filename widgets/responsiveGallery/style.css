@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    color: white;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(86, 13, 204);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+header{
+    background: black;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.container{
+    background-image: lightgrey;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    background: lightgrey; 
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.panel{
+    border-radius: 20px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    flex: .5;
+    margin: 20px;
+    position: relative;
+    transition: flex 1s ease-in-out;
+    box-shadow: 0 2px 10px black;
+}
+.panel h3{
+    background: rgb(86, 13, 204, .5);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity .5s linear .5s;
+}
+
+.home-btn{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 2em;
+    width: 8em;
+}
+.home-btn a {
+    color: black;
+    padding: 1em 2em;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+
+
+@media(max-width: 600px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    }
+}

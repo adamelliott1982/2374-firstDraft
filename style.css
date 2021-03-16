@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+/* UNIVERSAL STYLING */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+}
+
+body{
+    text-shadow: 0 0 2px black;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20fr 10fr 60fr 10fr;
+    grid-template-areas: 
+    'header'
+    'nav'
+    'main'
+    'footer';
+    background: rgb(255, 255, 255);
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+/************************************************ HOME */
+/* HEADER */
+header{
+    color: white;
+    font-size: .75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    grid-area: 'header';
+    background-color: rgb(111, 38, 184);
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+}
+
+/* NAV */
+nav{
+    height: 10vh;
+    grid-area: 'nav';
+    width: 100%;
+    background-color: lightslategrey;
+}
+nav ul{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    list-style: none;
+}
+nav ul li{
+    height: 10vh;
+    width: 33%;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li:hover{
+    background-color: rgb(111, 38, 184);
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+nav ul a:hover{
+    color: lightgrey;
+}
+
+
+/* MAIN */
+main{
+    font-size: .80em;
+    color: white;
+    height: 60vh;
+    text-align: center;
+    padding: 10px;
+    grid-area: 'main';
+    background-image: url(./img/processors.jpg);
+    background-size: cover;
+    overflow: auto;
+}
+#banner{
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: .5em;
+    padding: 2em;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px black;
+}
+#banner p{
+    margin: 1em auto;
+}
+#benefits{
+    list-style: none;
+}
+#benefits li:hover {
+    text-shadow: 0 0 5px black;
+}
+
+
+
+
+/* PASSWORD FORM */
+#sign-in{
+    color: white;
+    background-color: rgb(111, 38, 184);
+    width: 80vw;
+    margin: 10px auto;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 20px;
+}
+#sign-in h2{
+    text-align: center;
+}
+#sign-in form{
+    text-align: center;
+}
+
+#sign-in h3{
+    width: 60%;
+    margin: auto;
+    border-radius: .25em;
+    padding: .5em;
+    font-size: 1em;
+}
+
+.pass-input{
+    padding: .5em 1em;
+    border-radius: .25em;
+}
+
+.pass-btn{
+    font-family: inherit;
+    padding: .5em 1em;
+    margin: 1em;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: 'footer';
+    color: white;
+    font-size: .75em;
+    background: lightslategrey;
+    width: 100vw;
+    padding: 20px;
+    height: 10vh;
+}
+
+
+
+
+/**********************************WIDGETS GALLERY */
+
+#gallery {
+    background-color: rgba(112, 128, 144, 0.5);
+    min-height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#gallery a {
+    min-width: 25vw; 
+    color: white;
+    text-decoration: none;
+    background-color: rgb(111, 38, 184);
+    height: 3em;
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    margin: .5em;
+    justify-content: space-around;
+    border-radius: .5em;
+}
+
+/******************************************** REVIEWS */
+
+
+#reviews-main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+article{
+    background: rgba(255, 255, 255, 0.75);
+    color: black;
+    padding: 1em;
+    width: 30vw;
+    border-radius: 1em;
+    min-width: 400px;
+    text-shadow: none;
+}
+
+
+
+
+
+/********************************************** CONTACT */
+#contact-main{
+    text-shadow: 0 0 2px black;
+    padding: 2em;
+}
+#contact-main p{
+    margin-top: 2em;
+}
+#contact-main a{
+    color: rgb(111, 38, 184);
+
+    padding: .5em;
+    border-radius: 1em;
+    text-decoration: none;
+    text-shadow: 0 0 5px white;
+    line-height: 3em;
+}
+#contact-main a:hover{
+    background-color: rgba(112, 128, 144, 0.397);}
+#contact-main p{ 
+    font-size: 1.5em;
+    padding: .25em 2em;
+}
+
+
+
+
+@media (min-width:600px){
+    h1{
+        font-size: 2.5em;
+    }
+    nav{
+        font-size: 1.5em;
+    }
+    #gallery a{
+        height: 5em;
+    }
+    footer{
+        font-size: 1.25em;
+    }
+}
+
+@media (min-width: 1080px){
+    h1{
+        font-size: 4em;
+    }
+    #gallery a{
+        font-size: 1.5em;
+    }
+    footer{
+        font-size: 1.5em;
+    }
+}
